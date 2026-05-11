@@ -1,4 +1,6 @@
-import jakarta.persistence.*;
+package model
+
+import jakarta.persistence.*
 
 @Entity
 @Table(name = "personagem")
@@ -24,7 +26,7 @@ class Personagem(
 
         if (this.velocidade >= adversario.velocidade) {
             adversario.vida -= danoFinal
-            println("${nome} é foi mais rápido e atacou primeiro! causando $danoFinal")
+            println("$nome é foi mais rápido e atacou primeiro! causando $danoFinal")
 
             // Se o adversário for Guerreiro, sofrerDano dele
             if (adversario is Guerreiro) {

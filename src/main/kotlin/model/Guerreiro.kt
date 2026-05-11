@@ -1,5 +1,4 @@
-package Model
-import Personagem
+package model
 import jakarta.persistence.*
 
 @Entity
