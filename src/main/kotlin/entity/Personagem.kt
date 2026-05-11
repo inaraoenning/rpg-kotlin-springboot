@@ -1,4 +1,4 @@
-package model
+package entity
 
 import jakarta.persistence.*
 
@@ -53,5 +53,12 @@ class Personagem(
         this.vida -= dano
         println(" -❤ $nome não conseguiu defender e sofreu $dano de dano.")
 
+    }
+
+    // Dentro de Personagem.kt
+    open fun receberDano(valor: Int) {
+        this.vida -= valor
+        if (this.vida < 0) this.vida = 0 // Garante que a vida não fique negativa
+        println("$nome recebeu $valor de dano! ❤️ Restante: $vida")
     }
 }
