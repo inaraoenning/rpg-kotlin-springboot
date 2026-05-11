@@ -9,3 +9,4 @@ class RpgApplication
 fun main(args: Array<String>) {
 	runApplication<RpgApplication>(*args)
 }
+
